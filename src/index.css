@@ -4,54 +4,54 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* New color palette based on design philosophy */
+    --background: 40 30% 96%; /* Light Sandstone */
+    --foreground: 24 10% 20%; /* Dark Gray/Brown Text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 30% 96%;
+    --card-foreground: 24 10% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 30% 96%;
+    --popover-foreground: 24 10% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 43 95% 55%; /* Marigold Yellow */
+    --primary-foreground: 43 20% 15%; /* Dark Brown for contrast */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 15 56% 92%; /* Warm Terracotta (background) */
+    --secondary-foreground: 15 40% 30%; /* Warm Terracotta (text) */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 15 56% 92%;
+    --muted-foreground: 24 8% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 75% 40%; /* Peacock Blue */
+    --accent-foreground: 195 20% 98%; /* White for contrast */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 195 75% 40%; /* Peacock Blue for focus ring */
 
-    --radius: 0.5rem;
+    --radius: 0.5rem; /* 8px, as requested */
 
+    /* Font definitions */
+    --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+    /* Unchanged sidebar variables for now */
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
+    /* Dark mode is not the focus of the new design, variables left as-is */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -96,6 +96,15 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body; /* Apply body font by default */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading; /* Apply heading font to heading elements */
   }
 }
